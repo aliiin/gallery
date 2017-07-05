@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToasterService} from 'angular2-toaster';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  private toasterService: ToasterService;
+
+  constructor(toasterService: ToasterService) {
+    this.toasterService = toasterService;
+  }
+
+  showMessage() {
+    this.toasterService.pop('success', 'Success', 'Your profile was updated!');
+  }
 }
