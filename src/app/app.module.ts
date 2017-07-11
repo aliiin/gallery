@@ -5,8 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { ToasterModule } from 'angular2-toaster';
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -33,7 +31,6 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
     BrowserModule,
     BrowserAnimationsModule,
-    ToasterModule
   ],
   providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]
